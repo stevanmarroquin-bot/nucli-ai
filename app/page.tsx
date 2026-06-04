@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { useState } from 'react'
 
-const AGENDA_URL = 'https://cal.com/nucli'
+const AGENDA_URL = 'https://calendly.com/stevanmarroquin/consulta-gratuita-nucli-ai'
 const HERO_IMAGES = ['/hero1.jpeg', '/hero2.jpeg', '/hero3.jpeg', '/hero4.jpeg']
 const SERIF = { fontFamily: "'Playfair Display', Georgia, serif" }
 const SANS  = { fontFamily: "'Inter', system-ui, sans-serif" }
