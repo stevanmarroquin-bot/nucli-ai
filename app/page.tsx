@@ -1,11 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import { useState } from 'react'
 
 const AGENDA_URL = 'https://calendly.com/stevanmarroquin/consulta-gratuita-nucli-ai'
-const HERO_IMAGES = ['/hero1.jpeg', '/hero2.jpeg', '/hero3.jpeg', '/hero4.jpeg']
 const SERIF = { fontFamily: "'Playfair Display', Georgia, serif" }
 const SANS  = { fontFamily: "'Inter', system-ui, sans-serif" }
 
@@ -83,122 +80,52 @@ function Nav() {
 
 // ─── Hero ─────────────────────────────────────────────────────
 function Hero() {
-  const [current, setCurrent] = useState(0)
-  const [fading, setFading] = useState(false)
   const headingRef = useHeadingReveal()
   const sub = useReveal('reveal', 'd2')
   const cta = useReveal('reveal', 'd3')
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setFading(true)
-      setTimeout(() => {
-        setCurrent(prev => (prev + 1) % HERO_IMAGES.length)
-        setFading(false)
-      }, 700)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
-
   return (
-    <section style={{
-      position: 'relative',
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'flex-end',
-      overflow: 'hidden',
-    }}>
-      {/* Background image */}
-      <div style={{
-        position: 'absolute', inset: 0,
-        opacity: fading ? 0 : 1,
-        transition: 'opacity 0.7s ease-in-out',
-      }}>
-        <Image
-          src={HERO_IMAGES[current]}
-          alt=""
-          fill
-          priority
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-        />
-      </div>
+    <section className="hero-pad" style={{ maxWidth: 1200, margin: '0 auto', width: '100%' }}>
+      <p style={{ fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 44, ...SANS }}>
+        Guatemala · nucli.solutions
+      </p>
 
-      {/* Gradient overlay — heavy at bottom so text is readable */}
-      <div style={{
-        position: 'absolute', inset: 0,
-        background: 'linear-gradient(to top, rgba(15,14,12,0.92) 0%, rgba(15,14,12,0.45) 50%, rgba(15,14,12,0.15) 100%)',
-      }} />
-
-      {/* Content */}
-      <div style={{
-        position: 'relative', zIndex: 1,
-        maxWidth: 1200, margin: '0 auto', width: '100%',
-        padding: 'clamp(80px, 10vw, 140px) 40px 80px',
-      }}>
-        <p style={{ fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'rgba(244,241,235,0.55)', marginBottom: 44, ...SANS }}>
-          Guatemala · nucli.solutions
-        </p>
-
-        <h1 ref={headingRef} style={{ marginBottom: 52 }}>
-          <span className="line-wrap">
-            <span style={{ ...SERIF, fontSize: 'clamp(3.2rem, 8vw, 8rem)', fontWeight: 700, letterSpacing: '-0.035em', lineHeight: 0.93, display: 'block', color: 'var(--fg-light)' }}>
-              Automatiza
-            </span>
+      <h1 ref={headingRef} style={{ marginBottom: 52 }}>
+        <span className="line-wrap">
+          <span style={{ ...SERIF, fontSize: 'clamp(3.2rem, 8vw, 8rem)', fontWeight: 700, letterSpacing: '-0.035em', lineHeight: 0.93, display: 'block' }}>
+            Automatiza
           </span>
-          <span className="line-wrap">
-            <span style={{ ...SERIF, fontSize: 'clamp(3.2rem, 8vw, 8rem)', fontWeight: 700, letterSpacing: '-0.035em', lineHeight: 0.93, display: 'block', color: 'var(--fg-light)' }}>
-              tu negocio
-            </span>
+        </span>
+        <span className="line-wrap">
+          <span style={{ ...SERIF, fontSize: 'clamp(3.2rem, 8vw, 8rem)', fontWeight: 700, letterSpacing: '-0.035em', lineHeight: 0.93, display: 'block' }}>
+            tu negocio
           </span>
-          <span className="line-wrap">
-            <span style={{ ...SERIF, fontSize: 'clamp(3.2rem, 8vw, 8rem)', fontStyle: 'italic', fontWeight: 400, letterSpacing: '-0.035em', lineHeight: 0.93, display: 'block', color: 'rgba(244,241,235,0.7)' }}>
-              con IA.
-            </span>
+        </span>
+        <span className="line-wrap">
+          <span style={{ ...SERIF, fontSize: 'clamp(3.2rem, 8vw, 8rem)', fontStyle: 'italic', fontWeight: 400, letterSpacing: '-0.035em', lineHeight: 0.93, display: 'block', color: 'var(--muted)' }}>
+            con IA.
           </span>
-        </h1>
+        </span>
+      </h1>
 
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 24, flexWrap: 'wrap', marginBottom: 48 }}>
-          <svg width="60" height="16" viewBox="0 0 60 16" fill="none" style={{ opacity: 0.35, flexShrink: 0, marginTop: 6 }}>
-            <line x1="0" y1="8" x2="52" y2="8" stroke="white" strokeWidth="1.5"/>
-            <polyline points="44,2 52,8 44,14" stroke="white" strokeWidth="1.5" fill="none"/>
-          </svg>
-          <div ref={sub} style={{ maxWidth: 500 }}>
-            <p style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(244,241,235,0.65)', ...SANS }}>
-              Recupera tu tiempo. Genera más dinero.<br />
-              Implementamos inteligencia artificial en tu negocio en menos de un mes,
-              sin contratar desarrolladores caros o contratar a más personas.
-            </p>
-          </div>
-        </div>
-
-        <div ref={cta}>
-          <a href={AGENDA_URL} target="_blank" rel="noopener noreferrer" className="pill pill-dark">
-            Agenda tu llamada gratis →
-          </a>
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 24, flexWrap: 'wrap', marginBottom: 48 }}>
+        <svg width="60" height="16" viewBox="0 0 60 16" fill="none" style={{ opacity: 0.28, flexShrink: 0, marginTop: 6 }}>
+          <line x1="0" y1="8" x2="52" y2="8" stroke="currentColor" strokeWidth="1.5"/>
+          <polyline points="44,2 52,8 44,14" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+        </svg>
+        <div ref={sub} style={{ maxWidth: 500 }}>
+          <p style={{ fontSize: 16, lineHeight: 1.8, color: 'var(--muted)', ...SANS }}>
+            Recupera tu tiempo. Genera más dinero.<br />
+            Implementamos inteligencia artificial en tu negocio en menos de un mes,
+            sin contratar desarrolladores caros o contratar a más personas.
+          </p>
         </div>
       </div>
 
-      {/* Slide indicator dots */}
-      <div style={{
-        position: 'absolute', bottom: 32, right: 40,
-        display: 'flex', gap: 6, zIndex: 2,
-      }}>
-        {HERO_IMAGES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            style={{
-              width: i === current ? 20 : 6,
-              height: 6,
-              borderRadius: 999,
-              background: i === current ? 'rgba(244,241,235,0.9)' : 'rgba(244,241,235,0.35)',
-              border: 'none',
-              cursor: 'pointer',
-              padding: 0,
-              transition: 'width 0.3s, background 0.3s',
-            }}
-          />
-        ))}
+      <div ref={cta}>
+        <a href={AGENDA_URL} target="_blank" rel="noopener noreferrer" className="pill">
+          Agenda tu llamada gratis →
+        </a>
       </div>
     </section>
   )
