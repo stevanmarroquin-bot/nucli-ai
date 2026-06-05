@@ -455,8 +455,8 @@ function Footer() {
         display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16,
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <img src="/logonuclipng.jpg" alt="Nucli AI" width={28} height={28}
-            style={{ mixBlendMode: 'screen', objectFit: 'contain', opacity: 0.55 }} />
+          <img src="/logofooter.png" alt="Nucli AI" width={28} height={28}
+            style={{ objectFit: 'contain', opacity: 0.7 }} />
           <span style={{ fontSize: 13, color: 'rgba(244,241,235,0.45)', ...SANS }}>
             Nucli AI · Guatemala · nucli.solutions
           </span>
