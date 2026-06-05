@@ -69,7 +69,7 @@ function Nav() {
         height: 64, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <img src="/logonotext.PNG" alt="Nucli AI" width={32} height={32}
+          <img src="/logonucli.PNG" alt="Nucli AI" width={32} height={32}
             style={{ mixBlendMode: 'multiply', objectFit: 'contain' }} />
           <span style={{ fontSize: 14, fontWeight: 500, letterSpacing: '-0.01em', ...SANS }}>Nucli AI</span>
         </div>
@@ -528,7 +528,7 @@ function Footer() {
         display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16,
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <img src="/logonotext.PNG" alt="Nucli AI" width={28} height={28}
+          <img src="/logonucli.PNG" alt="Nucli AI" width={28} height={28}
             style={{ mixBlendMode: 'screen', objectFit: 'contain', opacity: 0.55 }} />
           <span style={{ fontSize: 13, color: 'rgba(244,241,235,0.45)', ...SANS }}>
             Nucli AI · Guatemala · nucli.solutions
