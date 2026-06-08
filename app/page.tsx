@@ -70,7 +70,9 @@ function Nav() {
             style={{ mixBlendMode: 'multiply', objectFit: 'contain' }} />
           <span style={{ fontSize: 14, fontWeight: 500, letterSpacing: '-0.01em', ...SANS }}>Nucli AI</span>
         </div>
-        <a href={AGENDA_URL} target="_blank" rel="noopener noreferrer" className="pill">
+        <a href={AGENDA_URL} target="_blank" rel="noopener noreferrer" className="pill" style={{
+          background: 'var(--fg)', color: 'var(--bg)', borderColor: 'var(--fg)',
+        }}>
           Agenda tu llamada →
         </a>
       </div>
