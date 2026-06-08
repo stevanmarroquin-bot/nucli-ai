@@ -123,7 +123,7 @@ function Hero() {
 
       <div ref={guarantee} style={{ marginBottom: 48, paddingLeft: 84 }}>
         <p style={{ fontSize: 13, lineHeight: 1.75, color: 'var(--muted)', maxWidth: 520, ...SANS }}>
-          Tu primer agente está funcionando en menos de 30 días — y si no ves resultados en 60 días,{' '}
+          Entregamos tu primer agente en menos de 30 días — y si no ves resultados en 60 días,{' '}
           <span style={{ color: 'var(--fg)', fontWeight: 500 }}>te damos un reembolso completo. Sin preguntas.</span>
         </p>
       </div>
@@ -320,7 +320,7 @@ const SERVICIOS_DETAIL = [
   { name: 'Agente de operaciones', desc: 'Un sistema a la medida de tu operación para que tu equipo trabaje con claridad, sin depender de ti para cada decisión.', price: 'Desde Q5,000 setup', monthly: 'Q450/mes' },
   { name: 'Agente de reactivación', desc: 'Contactamos tu base de clientes dormidos con mensajes conversacionales de IA. Solo ventas que creías perdidas volviendo a entrar.', price: 'Desde Q2,500 setup', monthly: 'Q200/mes' },
   { name: 'Agente de reputación', desc: 'Pedimos reseñas a tus clientes satisfechos automáticamente, respondemos cada reseña con IA y generamos referidos. Más reseñas en Google, más clientes encontrándote.', price: 'Desde Q2,500 setup', monthly: 'Q200/mes' },
-  { name: 'App a la medida', desc: 'Un producto digital completo — agendamiento, membresías, pedidos, o lo que tu negocio necesite para escalar.', price: 'Desde Q10,000 setup', monthly: 'Q700/mes' },
+  { name: 'App a la medida', desc: 'Agendamiento, membresías, pedidos, o lo que tu negocio necesite para escalar. Un producto digital completo construido para ti.', price: 'Desde Q10,000 setup', monthly: 'Q700/mes' },
 ]
 
 function ServiciosDetail() {
@@ -360,8 +360,9 @@ function ServiciosDetail() {
           ))}
         </div>
 
-        <p style={{ marginTop: 32, fontSize: 15, lineHeight: 1.75, color: 'var(--muted)', ...SANS }}>
-          ¿Necesitas más de un agente? Cada agente adicional tiene descuento acumulado hasta un 20% en setup y mensual.
+        <p style={{ marginTop: 32, fontSize: 15, lineHeight: 1.75, ...SANS }}>
+          <span style={{ color: 'var(--fg)', fontWeight: 500 }}>¿Necesitas más de un agente?</span>{' '}
+          <span style={{ color: 'var(--muted)' }}>Cada agente adicional que necesites tiene descuento acumulado de hasta un 20% en el precio del setup y mensual.</span>
         </p>
       </div>
     </section>
