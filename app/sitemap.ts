@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      url: 'https://nucli.solutions/thank-you',
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.1,
+    },
+    {
       url: 'https://nucli.solutions/guatemala/terms',
       lastModified: new Date(),
       changeFrequency: 'yearly',
