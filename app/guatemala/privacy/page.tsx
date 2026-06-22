@@ -24,7 +24,7 @@ export default function PrivacyPage() {
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        <Link href="/" style={{ textDecoration: 'none' }}>
+        <Link href="/guatemala" style={{ textDecoration: 'none' }}>
           <img
             src="/logonuclipng.jpg"
             alt="Nucli AI"
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
           />
         </Link>
         <Link
-          href="/"
+          href="/guatemala"
           style={{
             fontSize: '0.875rem',
             color: 'var(--fg)',
