@@ -224,9 +224,16 @@ function Origin() {
       <div ref={ref} style={{ maxWidth: 900, margin: '0 auto' }}>
         <Tag>Origin</Tag>
         <div className="origin-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, marginTop: 48, alignItems: 'start' }}>
-          <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, color: '#ffffff', fontFamily: F }}>
-            I'm a tattoo artist. I built this for my own studio first.
-          </h2>
+          <div>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, color: '#ffffff', fontFamily: F, marginBottom: 32 }}>
+              I'm a tattoo artist. I built this for my own studio first.
+            </h2>
+            <img
+              src="/stevan.png"
+              alt="Stevan Marroquin"
+              style={{ width: '100%', maxWidth: 420, display: 'block', filter: 'grayscale(20%)', borderRadius: 4 }}
+            />
+          </div>
           <div>
             <p style={{ fontSize: 15, lineHeight: 1.85, color: 'rgba(255,255,255,0.55)', marginBottom: 20, fontFamily: F }}>
               I run Soul's Anchor Tattoo Studio in Guatemala City. I was losing clients I never even knew I had — people who DM'd at night or while I was tattooing, didn't hear back until I finished, and booked somewhere else by the time I replied.
